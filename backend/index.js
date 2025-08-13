@@ -10,7 +10,12 @@ const crypto = require("crypto");
 const app = express();
 const port = 3001;
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://foodify-5nesxycdo-tanaykumar-v2s-projects.vercel.app', 
+  optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 mongoose
