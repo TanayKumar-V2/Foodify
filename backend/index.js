@@ -13,9 +13,6 @@ const port = 3001;
 
 
 app.use(cors);
-// Handle preflight requests across all routes
-app.options('*', cors(corsOptions));
->>>>>>> 15b915f3ca2440d715729a87fb412ae72619a881
 app.use(express.json());
 
 mongoose
