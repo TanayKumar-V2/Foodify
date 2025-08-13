@@ -10,18 +10,9 @@ const crypto = require("crypto");
 const app = express();
 const port = 3001;
 
-<<<<<<< HEAD
-app.use(cors);
-=======
-const corsOptions = {
-  origin: 'https://foodify-5nesxycdo-tanaykumar-v2s-projects.vercel.app', 
-  methods: "GET,POST,DELETE,OPTIONS", 
-  allowedHeaders: "Content-Type,Authorization", 
-  credentials: true,
-  optionsSuccessStatus: 200 
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors);
 // Handle preflight requests across all routes
 app.options('*', cors(corsOptions));
 >>>>>>> 15b915f3ca2440d715729a87fb412ae72619a881
