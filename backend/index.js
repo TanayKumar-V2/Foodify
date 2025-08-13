@@ -12,10 +12,15 @@ const port = 3001;
 
 const corsOptions = {
   origin: 'https://foodify-5nesxycdo-tanaykumar-v2s-projects.vercel.app', 
+  methods: "GET,POST,DELETE,OPTIONS", 
+  allowedHeaders: "Content-Type,Authorization", 
+  credentials: true,
   optionsSuccessStatus: 200 
 };
 
 app.use(cors(corsOptions));
+// Handle preflight requests across all routes
+app.options('*', cors(corsOptions));
 app.use(express.json());
 
 mongoose
